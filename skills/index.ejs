@@ -1,0 +1,12 @@
+<h3>This portion comes from skills/index.ejs</h3>
+
+<% skills.forEach(function(t) { %>
+    <li>
+    <a href="/skills/<%= t.id %>"><%= t.skills %></a>
+};
+    // GET /skills
+router.get('/', skillsCtrl.index);
+// GET /skills/:id
+router.get('/:id', skillsCtrl.show);
+
+<h3>This portion comes from skills/index.ejs</h3>

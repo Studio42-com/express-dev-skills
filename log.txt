@@ -1,0 +1,21 @@
+12/6/20201: 0:58:
+
+Initial commit, 4th try.
+
+Status:
+Database not being accessed. Cannot figure out why.
+Nodemon is working.
+No "problems" are found
+
+Using the "todos" as a base-model. I plan to completely or at least slightly restructure the database.
+
+Looking at 127.0.0.1:3000/skills
+The database is located at: models/skill.js
+	(proven by adding a line and refreshing the page)
+
+Views/skills/index.ejs
+
+Resolved issue:
+View/skills/index.ejs: lines referring to t.skill were referring to t.skills
+The S at the end was killing things. Once a test was done, we got better results.
+Currently the s.skill ? done is not showing correctly.

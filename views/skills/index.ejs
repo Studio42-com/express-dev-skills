@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Skills</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>Dem Mad Skillz: "views/skills: index.ejs"</h1>
+    <ul>
+      <% skills.forEach(function(s) { %>
+        <li>
+          <%= s.skill %> //I want to see the skill entry.
+            - 
+          <%= s.done ? 'done' : 'not done' %> //I want to see the done entry
+        </li>
+      <% }); %>
+    </ul>
+  </body> 
+
+</html>
