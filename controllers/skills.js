@@ -7,7 +7,8 @@
     index,
     show,
     new: newSkill,
-    create
+    create,
+    delete: deleteSkill
   };
   
   function index(req, res) {
@@ -31,5 +32,10 @@
   // The model is responsible for creating data
   Skill.create(req.body);
   // Do a redirect anytime data is changed
+  res.redirect('/skills');
+}
+
+function deleteSkill(req, res) {
+  Todo.deleteOne(req.params.id);
   res.redirect('/skills');
 }

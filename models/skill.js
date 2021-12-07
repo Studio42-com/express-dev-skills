@@ -12,7 +12,8 @@ module.exports = {
   getAll,
   index,
   getOne,
-  create
+  create,
+  deleteOne
 };
 
 function getAll() {
@@ -40,26 +41,8 @@ function create(skill) {
   skills.push(skillObj);
 }
 
-// const todos = [
-//     {id: 125223, todo: 'Feed Dogs', done: true},
-//     {id: 127904, todo: 'Learn Express', done: false},
-//     {id: 139608, todo: 'Buy Milk', done: false}
-//   ];
-  
-//   // We need to require to Todo model
-// const Skill = require('../models/skill');
-
-//   module.exports = {
-//     getAll, index
-//   };
-  
-//   function getAll() {
-//     return skills;
-//   }
-
-//   function index(req, res) {
-//     let todos = Todo.getAll();
-//     res.render('todos/index', {
-//       todos
-//     });
-//   }
+function deleteOne(id) {
+  // Find the index based on the id of the todo object
+  const idx = skills.findIndex(skill => skill.id === parseInt(id));
+  skills.splice(idx, 1);
+}
