@@ -10,7 +10,9 @@ const Skill = require('../models/skill');
 
 module.exports = {
   getAll,
-  index
+  index,
+  getOne,
+  create
 };
 
 function getAll() {
@@ -30,6 +32,13 @@ function index(req, res) {
   });
 }
 
+function create(skill) {
+  // Add the id
+  skillObj.id = Math.floor(Math.random() * 1000000);
+  // New skill wouldn't be done :)
+  skillObj.done = false;
+  skills.push(skillObj);
+}
 
 // const todos = [
 //     {id: 125223, todo: 'Feed Dogs', done: true},
