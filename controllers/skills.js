@@ -2,7 +2,8 @@
 
  // Should name the model in uppercase and singular
  const Skill = require('../models/skill');
- 
+
+
  module.exports = {
     index,
     show,
@@ -12,18 +13,16 @@
   };
   
   function index(req, res) {
-    res.render('skills/index', {
-      skills: Skill.getAll()
-    });
-  }
+    let skills = Skill.getAll();
+    res.render('skills/index', { skills });
+} 
 
   function show(req, res) {
-    res.render('skills/show', {
-      skill: Skill.getOne(req.params.id),
-    });
+    let skill = Skill.getOne(req.params.id);
+    res.render('skills/show', { skill });
   }
 
- function newSkill(req,res) {
+ function newSkill(req, res) {
    res.render('skills/new');
  } 
 
@@ -36,6 +35,6 @@
 }
 
 function deleteSkill(req, res) {
-  Todo.deleteOne(req.params.id);
+  Skill.deleteOne(req.params.id);
   res.redirect('/skills');
 }

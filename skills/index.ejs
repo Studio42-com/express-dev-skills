@@ -1,8 +1,8 @@
 <h3>This portion comes from skills/index.ejs</h3>
 
-<% skills.forEach(function(t) { %>
+<% skills.forEach(function(s) { %>
     <li>
-    <a href="/skills/<%= t.id %>"><%= t.skills %></a>
+    <a href="/skills/<%= s.id %>"><%= s.skills %></a>
 };
     // GET /skills
 router.get('/', skillsCtrl.index);

@@ -5,7 +5,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require('method-override');
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var skillsRouter = require('./routes/skills');
 
 var app = express();
@@ -27,7 +26,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/skills', skillsRouter);
 
 // catch 404 and forward to error handler

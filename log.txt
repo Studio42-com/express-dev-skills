@@ -19,3 +19,10 @@ Resolved issue:
 View/skills/index.ejs: lines referring to t.skill were referring to t.skills
 The S at the end was killing things. Once a test was done, we got better results.
 Currently the s.skill ? done is not showing correctly.
+
+
+12/7/2021:
+Found minor issues. Fixed. Resolved problems discovered.
+
+Remaining issue:
+DELETE function not working properly. It does delete but from the bottom-up.
