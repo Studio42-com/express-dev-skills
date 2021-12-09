@@ -1,8 +1,8 @@
 const skills = [
-  { id: '123456', skill: "Social Distance Parking", done: true },
-  { id: '234567', skill: "Meeting Avoidance", done: false },
-  { id: '345678', skill: "Water Retention", done: false },
-  { id: '456789', skill: "Hide and Seek", done: false },
+  { id: 123456, skill: "Social Distance Parking", done: true },
+  { id: 234567, skill: "Meeting Avoidance", done: false },
+  { id: 345678, skill: "Water Retention", done: false },
+  { id: 456789, skill: "Hide and Seek", done: false },
 ];
 
 module.exports = {
